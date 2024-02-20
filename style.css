@@ -8,6 +8,66 @@ body {
   align-items: center;
 }
 
+.btn {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: none;  
+	border-radius: 4px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #fff;
+	background-color: #1a73e8;
+	position: relative;
+	overflow:hidden;
+	vertical-align: top;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation; 
+	z-index: 1;
+}
+.btn span{
+	position: absolute;
+	background: #fff;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	pointer-events: none;
+	animation: btn_ripples 0.6s linear infinite;
+}
+@keyframes btn_ripples {
+	0% {
+		width: 0px;
+		height: 0px;
+		opacity: 0.5;
+	}
+	100% {
+		width: 1000px;
+		height: 1000px;
+		opacity: 0;
+	}
+}
+.btn:hover {
+	box-shadow: 0 1px 2px 0 rgb(26 115 232 / 45%), 0 1px 3px 1px rgb(26 115 232 / 30%);
+	background-color: #297be6;
+}
+.btn:active {
+	box-shadow: 0 1px 2px 0 rgb(26 115 232 / 45%), 0 2px 6px 2px rgb(26 115 232 / 30%);
+	background-color: #1a73e8 !important;
+}
+.btn:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn:disabled {
+	pointer-events: none;
+	opacity: 0.65;
+}
+
 .header {
   margin: 40px 0;
 }
@@ -28,6 +88,67 @@ body {
   font-size: 16px;
   line-height: 1.4;
   margin: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a:link {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: rgb(255, 123, 0);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#video-bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  margin-top: 40vh;
+  font-size: 2em;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 40vh;
+  font-size: 2em;
 }
 
 .links {
@@ -151,3 +272,5 @@ footer {
     width: 0;
   }
 }
+
+
